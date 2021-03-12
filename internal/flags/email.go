@@ -8,16 +8,19 @@ var Email = []cli.Flag{
 		Aliases: []string{"files"},
 	},
 	&cli.StringFlag{
-		Name:    "password",
-		EnvVars: []string{"EMAIL_PASSWORD"},
+		Name:     "password",
+		Required: true,
+		EnvVars:  []string{"EMAIL_PASSWORD"},
 	},
 	&cli.StringFlag{
-		Name:    "host",
-		EnvVars: []string{"EMAIL_HOST"},
+		Name:     "host",
+		Required: true,
+		EnvVars:  []string{"EMAIL_HOST"},
 	},
 	&cli.StringFlag{
-		Name:    "from",
-		EnvVars: []string{"EMAIL_FROM"},
+		Name:     "from",
+		Required: true,
+		EnvVars:  []string{"EMAIL_FROM"},
 	},
 	&cli.StringFlag{
 		Name:    "port",
@@ -25,14 +28,18 @@ var Email = []cli.Flag{
 		EnvVars: []string{"EMAIL_PORT"},
 	},
 	&cli.StringFlag{
-		Name:    "template",
-		EnvVars: []string{"EMAIL_TEMPLATE"},
+		Name:     "template",
+		Required: true,
+		EnvVars:  []string{"EMAIL_TEMPLATE"},
 	},
 	&cli.StringFlag{
-		Name: "to",
+		Name:     "to",
+		Required: true,
+		Usage:    "to send to mulitples pass them ',' seperated",
 	},
 	&cli.StringFlag{
-		Name: "subject",
+		Name:     "subject",
+		Required: true,
 	},
 	&cli.StringFlag{
 		Name:  "data",

@@ -8,6 +8,20 @@ Attach Files via files flags, pass file path delimited by `,`
 go install github.com/joematpal/email
 ```
 
+## usage
+It will error if one uses smtp.gmail.com the auth will panic if not enabled
+https://myaccount.google.com/lesssecureapps
+
+## example
+```
+EMAIL_PASSWORD=$SUPER_SECRET_PASS \
+EMAIL_HOST=smtp.gmail.com \
+EMAIL_FROM=joseph@test.com \
+EMAIL_TEMPLATE=/path/to/template \
+email --to recepient@test.com \
+--subject "test subject" \
+--file /path/to/file1,/path/to/file2
+```
 ## help
 ```
 NAME:
