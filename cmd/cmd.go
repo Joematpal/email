@@ -74,11 +74,6 @@ func NewApp() *cli.App {
 }
 
 func parseTemplate(templateFileName string, data map[string]interface{}) (string, error) {
-	// templatePath, err := filepath.Abs(templateFileName)
-	// if err != nil {
-	// 	return "", errors.New("invalid template name")
-	// }
-	// fmt.Println(template)
 	t, err := template.ParseFiles(templateFileName)
 	if err != nil {
 		return "", fmt.Errorf("%s: %v", templateFileName, err)
